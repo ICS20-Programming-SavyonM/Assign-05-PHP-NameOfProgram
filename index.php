@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
      <!--metadata-->
     <meta charset="utf-8">
     <meta name="description" content="User Input, with JavaScript">
@@ -30,7 +31,7 @@
       <tr align="center">
         <td valign="top" align="right">
           <form action="" method="post">
-            <label for="userNum">Enter a positive integer:</label><br>
+            <label for="userNum">Enter an integer:</label><br>
             <input type="number" id="userNum" name="userNum" required><br><br>
             <input type="submit" value="Check Prime">
           </form>
@@ -49,9 +50,15 @@
       </tr>
     </table>
 
+   <!-- Video -->
+    <video src="./videos/PrimeVideo.mp4" width="480" height="360" controls></video>
+
+    <!-- GIF -->
+    <img src="./images/numbers.gif" alt="Prime" width="480" height="360">
+
     <br>
     <div id="display-results">
-     <?
+      <?
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userNum = intval($_POST['userNum']);
@@ -74,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function checkPrime($userNum) {
+  
     // Initialize the variables
     $message = "";
     $counter = 2;
@@ -84,6 +92,7 @@ function checkPrime($userNum) {
     } elseif ($userNum == 2) {
         $message = "The number 2 is prime";
     } else {
+      
         // Use a while loop to determine if the number is prime
         while ($counter < $userNum) {
             $result = $userNum / $counter;
